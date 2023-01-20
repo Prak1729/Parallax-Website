@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;              /*view port hight about 100vh*/
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.container{
+    position:relative;         /*iski zarroorat hai ki ni sochna*/
+    height: 100%;
+    display: flex;
+    justify-content: center;  /* center me lane ke liye justify-content & align-items dono ko center krte hai*/
+    align-items: center;
+    transform-style: preserve-3d;   /*3d properties ko preserve krna hai, hatana nhi hai*/
+    z-index: -1;                       /*iski zarroorat hai ki ni sochna*/
+}
+
+.background{
+    transform: translateZ(-40px) scale(5);     /*Background image door krne ke liye*/
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);     /*foreground image door krne ke liye*/
+}
+
+.background, .foreground{
+    position:absolute;     /*absolute position use for overlap the images*/
+    height: 100%;              /*dono images pora view port le*/
+    width: 100%;
+    object-fit: cover;
+    z-index:-1;             /*z-index use for layering of images, konsi image upar ayegi kon si niche use set krta hai*/
+}
+
+h1{
+    position: absolute;
+    top:5rem;
+
+    font-size:10rem;
+    letter-spacing:4px;
+    color:white;
+    text-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color:white;
+    padding:5rem 0;
+}
+
+.secHeading{
+    font-size:5rem;
+    padding:0 10rem;
+}
+
+.text{
+    font-size:1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position:relative;
+    width:100%;
+    background-attachment: fixed;  /*image ke upar sb chiz move hongi*/
+    background-position: center;
+    background-size: cover;
+    height:500px;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;   
+    padding: 0.5rem 2.5rem;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateX(-50%);
+    color:black;
+    font-size:3.5rem;
+    font-weight:600;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+
+
